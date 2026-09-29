@@ -1,0 +1,45 @@
+Báo cáo kiểm tra môi trường, học phần 04211 Bảo mật sinh trắc
+Thời điểm: 2026-09-29 08:30
+Hệ điều hành: Linux 6.8.0-1064-azure (x86_64)
+Chế độ: nhanh
+
+[ĐẠT]      Phiên bản Python: 3.12.14, Linux x86_64
+[ĐẠT]      Môi trường ảo: đang chạy trong môi trường ảo
+[ĐẠT]      Dung lượng đĩa trống: 35.2 GB (khuyến nghị từ 10 GB)
+[ĐẠT]      Bộ nhớ RAM: 7.8 GB (khuyến nghị từ 8 GB)
+[ĐẠT]      Mã hoá UTF-8: PYTHONUTF8 chưa đặt (chỉ cần trên Windows)
+[THÔNG TIN] Biến proxy: không đặt
+[ĐẠT]      numpy: phiên bản 2.5.3, nhập trong 1.8 s
+[ĐẠT]      scipy: phiên bản 1.18.1, nhập trong 0.4 s
+[ĐẠT]      pandas: phiên bản 3.0.5, nhập trong 2.2 s
+[ĐẠT]      matplotlib: phiên bản 3.11.2, nhập trong 1.3 s
+[ĐẠT]      scikit-learn: phiên bản 1.9.1, nhập trong 6.2 s
+[ĐẠT]      scikit-image: phiên bản 0.26.0, nhập trong 0.0 s
+[ĐẠT]      pillow: phiên bản 12.3.0, nhập trong 0.0 s
+[LỖI]      opencv-python: phiên bản 4.14.0.94; nhập lỗi: ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+[ĐẠT]      setuptools: phiên bản 81.0.0, nhập trong 0.3 s
+[ĐẠT]      pyeer: phiên bản 0.5.6, nhập trong 2.8 s
+[LỖI]      fingerprint_enhancer: phiên bản 0.0.14; nhập lỗi: ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+[LỖI]      fingerprint-feature-extractor: phiên bản 0.0.10; nhập lỗi: ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+[ĐẠT]      lightphe: phiên bản 0.0.25, nhập trong 2.6 s
+[ĐẠT]      lightdsa: phiên bản 0.0.3, nhập trong 0.4 s
+[ĐẠT]      tenseal: phiên bản 0.3.18, nhập trong 0.2 s
+[ĐẠT]      bchlib: phiên bản 2.1.3, nhập trong 0.0 s
+[ĐẠT]      galois: phiên bản 0.4.11, nhập trong 4.3 s
+[ĐẠT]      soundfile: phiên bản 0.14.0, nhập trong 0.3 s
+[ĐẠT]      huggingface_hub: phiên bản 1.31.0, nhập trong 0.0 s
+[ĐẠT]      tensorflow: phiên bản 2.21.0 (bỏ qua nhập thử)
+[ĐẠT]      tf-keras: phiên bản 2.21.0 (bỏ qua nhập thử)
+[ĐẠT]      torch: phiên bản 2.11.0 (bỏ qua nhập thử)
+[ĐẠT]      torchaudio: phiên bản 2.11.0 (bỏ qua nhập thử)
+[ĐẠT]      speechbrain: phiên bản 1.1.1 (bỏ qua nhập thử)
+[ĐẠT]      deepface: phiên bản 0.0.100 (bỏ qua nhập thử)
+[LỖI]      OpenCV: không nhập được: ImportError
+[ĐẠT]      Phép tính numpy (nghịch đảo ma trận 200 x 200)
+[ĐẠT]      Vẽ hình có chữ tiếng Việt (matplotlib Agg)
+[CẢNH BÁO] Trọng số DeepFace: chưa có thư mục ~/.deepface/weights; cần trước TH04 (không ảnh hưởng TH01 đến TH03). Chép gói trọng số của phòng máy bằng `python download_weights.py giai-nen <gói .zip>` hoặc tải ở nhà bằng `python download_weights.py tai`
+[CẢNH BÁO] Mô hình SpeechBrain ECAPA: chưa tải trước; cần cho TH06 (xem download_weights.py)
+
+Tổng kết: 29 đạt, 2 cảnh báo, 4 lỗi; thời gian kiểm tra 25.1 s.
+Môi trường CHƯA sẵn sàng: xử lý các dòng [LỖI] theo bảng khắc phục trong huong-dan-cai-dat.md.
+Sẵn sàng cho TH01: có.

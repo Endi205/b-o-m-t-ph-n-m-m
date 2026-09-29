@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+# Phương án dự phòng trên Google Colab cho học phần 04211 Bảo mật sinh trắc.
+# Cách dùng trong ô đầu tiên của notebook:  !pip install -q -r requirements-colab.txt
+#
+# CẢNH BÁO VỀ DỮ LIỆU: Colab chạy trên máy chủ của Google. Chỉ dùng tập dữ liệu công khai
+# (LFW, FVC set B, Mini LibriSpeech) hoặc dữ liệu tổng hợp của bộ bài; tuyệt đối không tải ảnh
+# khuôn mặt, giọng nói hay vân tay của sinh viên lên Colab (xem cam-ket-dao-duc-va-dong-y.md).
+#
+# Không ghim tensorflow, torch, torchaudio, numpy: giữ các bản Colab đã cài sẵn để tránh cài lại
+# vài GB. Colab bản 2026.07 dùng Python 3.12, TensorFlow 2.20 và PyTorch 2.11, nên tf-keras phải
+# cùng nhánh 2.20 với TensorFlow.
+deepface==0.0.100
+tf-keras==2.20.1
+# OpenCV 5 đã bỏ CascadeClassifier và dnn.readNetFromCaffe mà DeepFace 0.0.100 cần
+opencv-python<5
+speechbrain==1.1.1
+pyeer==0.5.6
+# pyeer 0.5.6 còn gọi pkg_resources, đã bị gỡ khỏi setuptools từ bản 82
+setuptools<82
+fingerprint_enhancer==0.0.14
+fingerprint-feature-extractor==0.0.10
+scikit-image==0.26.0
+lightphe==0.0.25
+lightdsa==0.0.3
+tenseal==0.3.18
+bchlib==2.1.3
+galois==0.4.11

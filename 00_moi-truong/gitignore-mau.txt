@@ -1,0 +1,54 @@
+# Cập nhật 23/09/2026: từ khi nộp bài qua kho sinhtrac-<MSSV>, dùng tệp .gitignore có sẵn trong kho mẫu
+# 04211-kho-mau (cho phép đồ thị trong labNN/hinh/). Tệp dưới đây chỉ còn dùng cho kho mã riêng không nộp bài.
+# Mẫu tệp .gitignore cho kho mã thực hành học phần 04211 Bảo mật sinh trắc.
+# Cách dùng: chép tệp này vào thư mục gốc của kho mã và đổi tên thành .gitignore
+#
+# Lý do: ảnh khuôn mặt, giọng nói, vân tay và mọi dữ liệu dẫn xuất (embedding, tệp .pkl của
+# DeepFace, mẫu sinh trắc đã bảo vệ) là dữ liệu sinh trắc học. Một khi đã đẩy lên Git thì lịch sử
+# phiên bản giữ lại vĩnh viễn, việc xoá về sau gần như không còn tác dụng.
+#
+# Mẫu này cố ý bỏ qua mọi tệp ảnh, kể cả hình kết quả như TH01_<ma-sinh-vien>_det.png. Bài nộp đi
+# qua kênh học tập dưới dạng tệp nén (xem quy-uoc-nop-bai.md, mục 2), không qua Git, nên việc bỏ qua
+# hình kết quả không làm thiếu bài nộp mà bảo đảm kho mã không bao giờ chứa ảnh người thật.
+
+# Môi trường và bộ đệm
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Dữ liệu và kết quả của bài thực hành
+du-lieu/
+du-lieu-rieng/
+du-lieu-pad/
+data/synthetic_*/
+ket-qua/
+cache-embedding/
+db-tham-chieu/
+mo-hinh/
+pretrained_models/
+
+# Tệp sinh trắc và dữ liệu dẫn xuất
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.wav
+*.flac
+*.mp3
+*.mp4
+*.avi
+*.mov
+*.npy
+*.npz
+*.pkl
+*.pkl.ldsa
+*.h5
+*.onnx
+*.pth
+*.ckpt
+
+# Khoá và bí mật
+.env
+*.key

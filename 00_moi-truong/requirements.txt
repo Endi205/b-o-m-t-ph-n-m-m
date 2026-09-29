@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+# Môi trường chuẩn của học phần 04211 Bảo mật sinh trắc (máy cá nhân và phòng máy).
+# Phiên bản Python: 3.12. Lệnh cài đặt: uv pip install -r requirements.txt
+# Mọi gói cấp cao đều ghim đúng phiên bản để kết quả giữa các máy so sánh được với nhau.
+# Dòng mã hoá utf-8 ở đầu tệp giúp pip đọc đúng chú thích tiếng Việt trên Windows.
+#
+# Máy macOS chip Intel (x86_64): TensorFlow 2.21, PyTorch 2.11, TenSEAL 0.3.18 và numba (cần cho galois)
+# không có bản cài sẵn (wheel) cho nền tảng này, nên các dòng có điều kiện sys_platform/platform_machine
+# bên dưới tự động bỏ qua các gói đó; xem huong-dan-cai-dat.md, mục về macOS chip Intel.
+
+# Khung học sâu cho DeepFace (TH04, TH05, TH08, TH10)
+tensorflow==2.21.0 ; sys_platform != "darwin" or platform_machine == "arm64"
+tf-keras==2.21.0 ; sys_platform != "darwin" or platform_machine == "arm64"
+deepface==0.0.100 ; sys_platform != "darwin" or platform_machine == "arm64"
+# OpenCV 5 đã bỏ CascadeClassifier và dnn.readNetFromCaffe mà DeepFace 0.0.100 cần, nên giữ nhánh 4.x
+opencv-python==4.14.0.94
+
+# PyTorch cho SpeechBrain (TH06) và mô-đun chống giả mạo MiniFASNet của DeepFace (TH08)
+torch==2.11.0 ; sys_platform != "darwin" or platform_machine == "arm64"
+torchaudio==2.11.0 ; sys_platform != "darwin" or platform_machine == "arm64"
+speechbrain==1.1.1 ; sys_platform != "darwin" or platform_machine == "arm64"
+soundfile==0.14.0
+huggingface_hub==1.31.0
+
+# Đánh giá hiệu năng (TH01, TH03, TH04, TH05, TH06, TH07)
+pyeer==0.5.6
+# pyeer 0.5.6 còn gọi pkg_resources; setuptools từ 82 trở đi không còn mô-đun này nên giữ ở 81
+setuptools==81.0.0
+
+# Vân tay (TH02, TH03)
+fingerprint_enhancer==0.0.14
+fingerprint-feature-extractor==0.0.10
+scikit-image==0.26.0
+
+# Bảo vệ mẫu sinh trắc (TH09, TH10)
+lightphe==0.0.25
+lightdsa==0.0.3
+tenseal==0.3.18 ; sys_platform != "darwin" or platform_machine == "arm64"
+bchlib==2.1.3
+galois==0.4.11 ; sys_platform != "darwin" or platform_machine == "arm64"
+
+# Tính toán khoa học và vẽ hình
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.5
+matplotlib==3.11.2
+scikit-learn==1.9.1
+pillow==12.3.0
